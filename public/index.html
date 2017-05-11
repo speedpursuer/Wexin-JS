@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>小店长APP官方下载页面</title>
+  <meta name="description" content="小店长APP官方下载页面">
+
+  
+  <!-- Smart App Banner -->
+  <meta name="apple-itunes-app" content="app-id=1230009615,affiliate-data=11l7ss">
+  
+
+  <!-- Open All Links In A New Tab/Window -->
+  <base target="_blank">
+
+  <!-- Styles -->  
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css">  
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script> -->
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Created with Awesome App Landing Page - http://github.com/joshbuchea/awesome-app-landing-page -->
+</head>
+
+  <body>
+
+    <div class="main" role="main">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-6">
+
+        <!-- Marketing -->
+        <div class="marketing">
+          <div class="app-meta">
+            
+              <img
+                class="app-icon"
+                style="min-width: 92px;"
+                height="auto"
+                 src="http://wx4.sinaimg.cn/large/006p1Rrsgy1fez2v7h5wkj307o07odgp.jpg"
+              />
+            
+            <span class="app-name">小店长APP</span>
+          </div>
+
+          
+          <h2 class="marketing-header">项目展示和营销工具</h2>
+          
+
+          <p class="marketing-desc">快速制作项目图文介绍，通过微信分享至客户或朋友圈。无需注册等繁琐步骤，下载即用。内置照片上添加文字、裁剪及马赛克效果，支持信息分类管理和搜索功能，简单易用。</p>
+          <div class="download-buttons">
+            <a
+              class="download-btn btn btn-lg"
+              href="http://itunes.apple.com/cn/app/id1230009615?mt=8">
+              <i class="fa fa-apple fa-lg" aria-hidden="true"></i> iOS下载
+            </a>
+
+            <!--
+            <a
+              class="download-btn btn btn-lg"
+              href="http://www.wandoujia.com/apps/com.lee.cliplay">
+              <i class="fa fa-android fa-lg" aria-hidden="true"></i> Android下载
+            </a>
+            -->
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-sm-6">
+
+        <!-- App Screenshot(s) -->
+        <div class="device iphone-se-silver-vertical">
+          <img
+            class="app-screenshot"
+            src="http://wx4.sinaimg.cn/large/006p1Rrsgy1fez2upbb9bj30hs0vk4pz.jpg"
+          />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!--
+<div class="social">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <ul class="social-links">
+  
+  
+  
+  
+  
+  
+  
+  
+  <li><a href="http://weibo.com/u/5866649154"><i class="fa fa-weibo fa-lg"></i></a></li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+<div class="footer">
+  <div class="container">
+    &copy; 2017 小店长 <a href="http://www.miitbeian.gov.cn/">沪ICP备17016356号-1</a>
+  </div>
+</div>
+
+
+
+    <script src="https://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+    
+  <!-- iTunes Search API -->
+  <script>
+    $(function() {
+      var API_URL = 'https://itunes.apple.com/lookup?id=1230009615&callback=?';
+      $.getJSON(API_URL, function(res) {
+        if (res.results && res.results.length) {
+          console.info('App info successfully loaded from Apple');
+          var appInfo = res.results[0];
+          // App Icon
+          var $appIcon = $('.app-icon');
+          if ( $appIcon && !$appIcon.attr('src') && appInfo.artworkUrl512 ) {
+            $appIcon.attr('src', appInfo.artworkUrl512);
+          }
+          // App Screenshot
+          var $appScreenshot = $('.app-screenshot');
+          if ( $appScreenshot && !$appScreenshot.attr('src') && appInfo.screenshotUrls && appInfo.screenshotUrls.length ) {
+            $appScreenshot.attr('src', appInfo.screenshotUrls[0]);
+          }
+        } else {
+          console.warn('Unable to load app info from Apple');
+        }
+      });
+    });
+  </script>
+  <!-- End iTunes Search API -->
+
+  </body>
+</html>
